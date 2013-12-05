@@ -1,4 +1,26 @@
 OapDocuments::Application.routes.draw do
+  get 'home/index'
+  namespace :home do
+    get "info2"
+    get "info"
+    get "iso"
+  end
+
+  namespace :iso do
+    get "tema1"
+    get "tema2"
+  end
+
+  namespace :info do
+    get "tema1"
+  end
+
+  namespace :info2 do
+    get "tema1"
+  end
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,11 +70,6 @@ OapDocuments::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'home#index'
 
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
 end
