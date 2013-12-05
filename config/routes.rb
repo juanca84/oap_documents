@@ -4,6 +4,7 @@ OapDocuments::Application.routes.draw do
     get "info2"
     get "info"
     get "iso"
+    get 'download_file'
   end
 
   namespace :iso do
